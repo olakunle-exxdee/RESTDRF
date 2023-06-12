@@ -7,6 +7,12 @@ from rest_framework.decorators import api_view
 # Create your views here.
 
 
+def product_lists(request):
+    products = Product.objects.all()
+    serializer = ProductSerializers(products, many=True)
+    return render(request, "index.html", {"products": serializer.data})
+
+
 @api_view(["GET", "POST"])
 def product_list(request):
     pass
