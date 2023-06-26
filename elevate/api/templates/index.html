@@ -9,9 +9,14 @@
     <title>Document</title>
   </head>
   <body>
-    {% for i in products %}
-    <p class="text-sm font-semibold leading-6 text-gray-900">{{ i.name }}</p>
-
+    <h1>All books</h1>
+    {% for book in products %}
+    <ul
+      class="max-w-md space-y-1 text-gray-500 list-disc dark:text-gray-400 p-4">
+      <li>name: {{ book.name }}</li>
+      <li>description: {{ book.description }}</li>
+      <li>price: {{ book.price }}</li>
+    </ul>
     {% endfor %}
   </body>
 </html>

@@ -22,5 +22,5 @@ from api.views import product_lists
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include("api.urls")),
-    path("", product_lists, name="myproduct"),
+   
 ]
